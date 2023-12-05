@@ -1,0 +1,143 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Slate: hsl(234, 29%, 20%);
+    --Charcoal: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --family: 'Roboto';
+}
+body{
+  min-height: 100vh;
+  font-family: var(--family);
+  background-color: var(--Slate);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+    
+}
+main{
+  max-width: 770px;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  gap: 50px;
+  background-color: var(--White);
+  padding: 20px 20px 20px 50px;
+}
+.text{
+  width: 50%;
+}
+.text h1{
+  font-size: 3.5vw;
+  font-family: var(--family);
+  color: var(--Slate);
+} 
+.text h4{
+  color: var(--Charcoal);
+  font-family: var(--family);
+  margin-top: 20px;
+}
+.image{
+  width: 50%;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+ ul{
+  display: grid;
+  gap: 16px;
+  margin: 20px 0 28px;
+}
+ul li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form{
+  display: grid;
+  gap: 16px;
+}
+form label{
+  font-family: var(--family);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Slate);
+  margin-bottom: 10px;
+}
+form input{
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-family: var(--family);
+  border-radius: 8px;
+  border: 1px solid var(--Grey);
+  outline: none;
+}
+
+form a{
+  border-radius: 7px;
+  width: 100%;
+  background-color: var(--Charcoal);
+  color: var(--White);
+  font-size: 18px;
+  font-family: var(--family);
+  outline: none;
+  padding: 10px 20px;
+  border: 2px solid var(--Charcoal);
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+form a:hover{
+  background-color: var(--Tomato);
+  color: var(--White);
+  font-weight: 700;
+}
+
+
+@media screen and (max-width: 768px){
+  main{
+    padding: 20px;
+  }
+
+ .text h1{
+  font-size: 4vw;
+ } 
+}
+
+@media screen and (max-width: 550px) {
+  main{
+    border-radius: 0;
+    flex-direction: column-reverse;
+    height: 770px;
+    background: var(--White) url(assets/images/illustration-sign-up-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .text{
+    width: 90%;
+  }
+  .text h1{
+    font-size: 40px;
+  }
+
+  .image img{
+    width: 0;
+  }
+  form a{
+    font-size: 14px;
+  }
+}
